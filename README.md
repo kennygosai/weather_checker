@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/kennygosai/weather_checker/">
-    <img src="https://github.com/kennygosai/weather_checker/blob/master/client/src/assets/icons/weatherchecker.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/kennygosai/weather_checker/blob/master/client/src/assets/icons/weatherchecker.png" alt="Logo" width="100" height="10">
   </a>
 
   <h3 align="center">Weather Checker</h3>

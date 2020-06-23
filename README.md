@@ -1,17 +1,9 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/kennygosai/weatherchecker/">
-    <img src="blob/master/src/assets/icons/weatherchecker.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/kennygosai/weather_checker/">
+    <img src="https://github.com/kennygosai/weather_checker/blob/master/client/src/assets/icons/weatherchecker.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Weather Checker</h3>
@@ -19,14 +11,14 @@
   <p align="center">
     A web application which gives the daily and hourly weather forecast of a given location.
     <br />
-    <a href="https://github.com/kennygosai/weatherchecker"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/kennygosai/weather_checker"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://kennysweatherchecker.herokuapp.com/">View Website</a>
     ·
-    <a href="https://github.com/kennygosai/weatherchecker/issues">Report Bug</a>
+    <a href="https://github.com/kennygosai/weather_checker/issues">Report Bug</a>
     ·
-    <a href="https://github.com/kennygosai/weatherchecker/issues">Request Feature</a>
+    <a href="https://github.com/kennygosai/weather_checker/issues">Request Feature</a>
   </p>
 </p>
 
@@ -76,11 +68,11 @@ npm install npm@latest -g
  
 1. Clone the repo
 ```sh
-git clone https://github.com/kennygosai/weatherchecker.git
+git clone https://github.com/kennygosai/weather_checker.git
 ```
 2. Install NPM packages
 ```sh
-cd weatherchecker
+cd weather_checker
 npm install
 cd client
 npm install
@@ -113,7 +105,7 @@ npm start
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/kennygosai/weatherchecker/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/kennygosai/weather_checker/issues) for a list of proposed features (and known issues).
 
 
 
@@ -134,7 +126,7 @@ Contributions are what make the open source community such an amazing place to b
 
 [Kenny Gosai](https://kennygosai.com/#contact)
 
-Project Link: [https://github.com/kennygosai/weatherchecker](https://github.com/kennygosai/weatherchecker)
+Project Link: [https://github.com/kennygosai/weather_checker](https://github.com/kennygosai/weather_checker)
 
 
 
@@ -150,13 +142,13 @@ Project Link: [https://github.com/kennygosai/weatherchecker](https://github.com/
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/kennygosai/weatherchecker/graphs/contributors
+[contributors-url]: https://github.com/kennygosai/weather_checker/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/kennygosai/weatherchecker/network/members
+[forks-url]: https://github.com/kennygosai/weather_checker/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/kennygosai/weatherchecker/stargazers
+[stars-url]: https://github.com/kennygosai/weather_checker/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/kennygosai/weatherchecker/issues
+[issues-url]: https://github.com/kennygosai/weather_checker/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/kenny-gosai-a27030187/
 [product-screenshot]: images/screenshot.png

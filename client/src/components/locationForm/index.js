@@ -1,57 +1,19 @@
+/*
+ * Filename: \client\src\components\locationForm\index.js
+ * Created Date: Sunday, June 14th 2020, 3:33:17 pm
+ * Author: Kenny Gosai
+ * 
+ * Copyright (c) 2020 Kenny Gosai
+ */
+
 import React, { useState } from "react";
 import CountrySelect from "../../components/CountrySelect";
 import { Box, TextField, Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import {useStyles} from "./useStyles"
 import ToggleButtons from "../ToggleButtons";
 import {  useDispatch } from "react-redux";
 import Cookies from "universal-cookie";
 import CustomizedSnackbars from "../CustomizedSnackbars";
-const axios = require("axios");
-const useStyles = makeStyles((theme) => ({
-  container: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100%",
-  },
-  mainContainer: {
-    height: "50vh",
-    ["@media (min-height: 1024px) and (max-height: 1366px)"]: {
-      height: "34vh",
-    },
-  },
-  toggleinput: {
-    marginTop: theme.spacing(1),
-    marginLeft: theme.spacing(1),
-  },
-  cityInput: {
-    margin: theme.spacing(1),
-    [theme.breakpoints.down("sm")]: {
-      width: 300,
-    },
-    [theme.breakpoints.up("md")]: {
-      width: 300,
-    },
-  },
-  svg: {
-    [theme.breakpoints.down("sm")]: {
-      width: 300,
-    },
-    [theme.breakpoints.up("md")]: {
-      width: 300,
-    },
-  },
-  buttonInput: {
-    margin: theme.spacing(1),
-    [theme.breakpoints.down("sm")]: {
-      width: 300,
-    },
-    [theme.breakpoints.up("md")]: {
-      width: 300,
-    },
-  },
-}));
 /**
  * Form which handles the input of the city cand country
  *
@@ -109,6 +71,7 @@ function LocationForm() {
         <img
           className={classes.svg}
           src={require("../../assets/icons/weatherchecker.png")}
+          alt="logo"
         ></img>
         <TextField
           id="outlined-search"

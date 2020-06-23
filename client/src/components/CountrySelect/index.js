@@ -1,7 +1,9 @@
 /*
- * Filename: \src\components\CountrySelect\index.js
+ * Filename: \client\src\components\CountrySelect\index.js
  * Created Date: Thursday, June 11th 2020, 10:32:18 am
  * Author: Kenny Gosai
+ * 
+ * Copyright (c) 2020 Kenny Gosai
  */
 
 /* eslint-disable no-use-before-define */

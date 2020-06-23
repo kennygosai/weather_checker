@@ -1,7 +1,15 @@
+/*
+ * Filename: \client\src\pages\DailyDetailed\index.js
+ * Created Date: Sunday, June 14th 2020, 3:29:56 pm
+ * Author: Kenny Gosai
+ *
+ * Copyright (c) 2020 Kenny Gosai
+ */
+
 import React from "react";
-import LocationForm from "../../components/locationForm";
+import LocationForm from "../../components/LocationForm";
 import { withRouter } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
+import { useStyles } from "./useStyles";
 import { days } from "../../constants/days";
 import { temperatureConverter } from "../../js/temperature";
 import {
@@ -16,96 +24,28 @@ import {
 import { useSelector } from "react-redux";
 import { SvgIcon } from "@material-ui/core";
 import WeatherIcon from "../../components/WeatherIcon";
-import { keys } from "@material-ui/core/styles/createBreakpoints";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+
+/**
+ * Page "/day/:day". Displays a detailed forecast of the day selected
+ *
+ * @component
+ * @example
+ * return (
+ *   <DailyDetailed />
+ * )
+ */
 const DailyDetailed = (props) => {
   const results = useSelector((state) => state.data);
   const day = props.match.params.day;
-  if(day > 7 || day < 0) {
-    props.history.push('/')
+  if (day > 7 || day < 0) {
+    props.history.push("/");
   }
-  const useStyles = makeStyles((theme) => ({
-    locationText: {
-      margin: theme.spacing(3),
-      textAlign: "center",
-      [theme.breakpoints.down("sm")]: {
-        textAlign: "center",
-      },
-    },
-    text: {
-      margin: theme.spacing(3),
-    },
-    cap: {
-      ...theme.typography.caption,
-    },
-    b1: {
-      ...theme.typography.body1,
-    },
-    b1Top: {
-      ...theme.typography.body1,
-      margin: theme.spacing(3),
-      textAlign: "center",
 
-      [theme.breakpoints.down("sm")]: {
-        textAlign: "center",
-      },
-    },
-    content: {
-      margin: theme.spacing(3),
-    },
-    weatherContainer: {
-      display: "flex",
-      justifyContent: "center",
-      flexWrap: "wrap",
-      //   textAlign:'left'
-    },
-    svg: {
-      height: 100,
-      width: 100,
-    },
-    flexDisp: {
-      display: "flex",
-    },
-    loadingContainer: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      flexWrap: "wrap",
-      margin: theme.spacing(3),
-    },
-    flexDispPaper: {
-      display: "flex",
-      width: "100%",
-      justifyContent: "space-around",
-      [theme.breakpoints.down("sm")]: {
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      },
-      ["@media (min-width: 768px) and (max-width: 1199px)"]: {
-        flexDirection: "row",
-        justifyContent: "space-around",
-      },
-    },
-    paperContainer: {
-      margin: theme.spacing(1),
-      [theme.breakpoints.down("sm")]: {
-        width: 320,
-      },
-      ["@media (min-width: 768px) and (max-width: 1199px)"]: {
-        width: 592,
-      },
-      ["@media (min-width: 1200px)"]: {
-        width: 1184,
-      },
-    },
-  }));
   const classes = useStyles();
   const data = results.length !== 0 ? results.data.daily.data[day] : null;
   const temperature = useSelector((state) => state.temperature);
   const loading = useSelector((state) => state.loading);
-
-  console.log(results);
   return (
     <React.Fragment>
       <LocationForm></LocationForm>
@@ -292,17 +232,6 @@ const DailyDetailed = (props) => {
                       </div>
                     </Box>
                   </Box>
-
-                  {/*i {Object.keys(results.data.daily.data).map((key) => {
-                    return (
-                      <DailyData
-                        key={key}
-                        index={key}
-                        data={results.data.daily.data[key]}
-                      ></DailyData>
-                    );
-                  })} */}
-                  {/* <DailyData data={results.data.daily}></DailyData> */}
                 </Box>
               </Paper>
             </Box>

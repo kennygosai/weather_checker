@@ -1,9 +1,11 @@
 /*
- * Filename: \src\components\CollapsibleTable\index.js
+ * Filename: \client\src\components\CollapsibleTable\index.js
  * Created Date: Monday, June 15th 2020, 12:14:24 pm
  * Author: Kenny Gosai
- *
+ * 
+ * Copyright (c) 2020 Kenny Gosai
  */
+
 
 import React from "react";
 import { useSelector } from "react-redux";

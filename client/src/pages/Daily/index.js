@@ -1,83 +1,33 @@
-import React, { useState } from "react";
-import TextField from "@material-ui/core/TextField";
-import CountrySelect from "../../components/CountrySelect";
-import { makeStyles } from "@material-ui/core/styles";
+/*
+ * Filename: \client\src\pages\Daily\index.js
+ * Created Date: Thursday, June 11th 2020, 8:44:51 am
+ * Author: Kenny Gosai
+ *
+ * Copyright (c) 2020 Kenny Gosai
+ */
+
+import React from "react";
+import { useStyles } from "./useStyles";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
 import DailyData from "../../components/DailyData";
 import { useSelector } from "react-redux";
-import { testdata } from "../../assets/test/data";
 import { Box, Paper, Divider, CircularProgress } from "@material-ui/core";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import LocationForm from "../../components/locationForm";
+import LocationForm from "../../components/LocationForm";
 import { withRouter } from "react-router-dom";
 
-const axios = require("axios");
-
+/**
+ * Home Page. Displays the high / low for the next 8 days
+ *
+ * @component
+ * @example
+ * return (
+ *   <Daily />
+ * )
+ */
 function Daily(props) {
-  const useStyles = makeStyles((theme) => ({
-    container: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "50vh",
-    },
-    cityInput: {
-      margin: theme.spacing(1),
-      [theme.breakpoints.down("sm")]: {
-        width: 300,
-      },
-      [theme.breakpoints.up("md")]: {
-        width: 300,
-      },
-    },
-    buttonInput: {
-      margin: theme.spacing(1),
-      [theme.breakpoints.down("sm")]: {
-        width: 300,
-      },
-      [theme.breakpoints.up("md")]: {
-        width: 300,
-      },
-    },
-    weatherContainer: {
-      display: "flex",
-      justifyContent: "center",
-      flexWrap: "wrap",
-    },
-    loadingContainer: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      flexWrap: "wrap",
-      margin: theme.spacing(3),
-    },
-    locationText: {
-      margin: theme.spacing(3),
-      textAlign: "center",
-
-      [theme.breakpoints.down("sm")]: {
-        textAlign: "center",
-      },
-    },
-    paperContainer: {
-      margin: theme.spacing(1),
-      [theme.breakpoints.down("sm")]: {
-        width: 296,
-      },
-      ["@media (min-width: 768px) and (max-width: 1199px)"]: {
-        width: 592,
-      },
-      ["@media (min-width: 1200px) and (max-width: 1280px)"]: {
-        width: 1184,
-      },
-    },
-  }));
   const loading = useSelector((state) => state.loading);
   const results = useSelector((state) => state.data);
   const classes = useStyles();
-  console.log(results);
 
   return (
     <React.Fragment>

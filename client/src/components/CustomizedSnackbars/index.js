@@ -1,3 +1,11 @@
+/*
+ * Filename: \client\src\components\CustomizedSnackbars\index.js
+ * Created Date: Wednesday, June 17th 2020, 8:46:56 am
+ * Author: Kenny Gosai
+ * 
+ * Copyright (c) 2020 Kenny Gosai
+ */
+
 import React from "react";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";

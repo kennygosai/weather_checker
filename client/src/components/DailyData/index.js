@@ -1,8 +1,12 @@
 /*
- * Filename: \src\components\DailyData\index.js
+ * Filename: d:\Documents\Github\weatherchecker\client\src\components\DailyData\index.js
+ * Path: d:\Documents\Github\weatherchecker\client
  * Created Date: Friday, June 12th 2020, 10:02:51 am
  * Author: Kenny Gosai
+ * 
+ * Copyright (c) 2020 Kenny Gosai
  */
+
 
 import React from "react";
 import { Button, Box, SvgIcon } from "@material-ui/core";

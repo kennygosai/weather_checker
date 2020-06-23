@@ -1,3 +1,17 @@
+/*
+ * Filename: \client\src\assets\test\data.js
+ * Created Date: Saturday, June 13th 2020, 9:17:25 am
+ * Author: Kenny Gosai
+ * 
+ * Copyright (c) 2020 Kenny Gosai
+ */
+
+/** 
+ * Used to test front-end.
+ * @constant
+ * @type {JSON}
+ * @default
+*/
 export const testdata = {
     data: {
         "latitude": 43.6534817,

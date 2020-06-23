@@ -1,15 +1,21 @@
+/*
+ * Filename: \client\src\index.js
+ * Created Date: Thursday, June 11th 2020, 8:44:51 am
+ * Author: Kenny Gosai
+ * 
+ * Copyright (c) 2020 Kenny Gosai
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './pages/Daily';
 import * as serviceWorker from './serviceWorker';
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import allReducer from "./reducers";
 import Routes from './routes';
 const store = createStore(
-  allReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  allReducer
 );
 ReactDOM.render(
   <Provider store={store}>

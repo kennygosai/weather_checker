@@ -1,3 +1,11 @@
+/*
+ * Filename: \client\src\components\WeatherIcon\index.js
+ * Created Date: Saturday, June 13th 2020, 8:34:48 am
+ * Author: Kenny Gosai
+ * 
+ * Copyright (c) 2020 Kenny Gosai
+ */
+
 import React from "react";
 
 // <---------- svg icons ---------->
@@ -23,7 +31,16 @@ import { ReactComponent as WanGib } from "../../assets/icons/wi-moon-waning-gibb
 import { ReactComponent as ThirdQuarter } from "../../assets/icons/wi-moon-third-quarter.svg";
 import { ReactComponent as WanCres } from "../../assets/icons/wi-moon-waning-crescent-1.svg";
 
-
+/**
+ * Displays icon depending on the property
+ *
+ * @component
+ * @example
+ * const type = "clear-day";
+ * return (
+ *   <WeatherIcon type = {type} />
+ * )
+ */
  const WeatherIcon = (props) => {
   const returnIcon = (type) => {
     if (type === "clear-day") {

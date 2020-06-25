@@ -2,10 +2,9 @@
  * Filename: \client\src\components\CollapsibleTable\index.js
  * Created Date: Monday, June 15th 2020, 12:14:24 pm
  * Author: Kenny Gosai
- * 
+ *
  * Copyright (c) 2020 Kenny Gosai
  */
-
 
 import React from "react";
 import { useSelector } from "react-redux";
@@ -124,7 +123,7 @@ function Row(props) {
                 </div>
                 <div className={classes.b1}>
                   {"Precipitation Probability: %"}
-                  {row.precipProbability * 100}
+                  {(row.precipProbability * 100).toFixed(2)}
                 </div>
                 {row.precipType !== undefined ? (
                   <React.Fragment>
@@ -143,7 +142,7 @@ function Row(props) {
                 ) : null}
                 <div className={classes.b1}>
                   {"Cloud Cover: %"}
-                  {row.cloudCover * 100}
+                  {(row.cloudCover * 100).toFixed(2)}
                 </div>
                 <div className={classes.b1}>
                   {"Dew Point: "}

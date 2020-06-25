@@ -136,7 +136,7 @@ const DailyDetailed = (props) => {
                     <Box className={classes.content}>
                       <div className={classes.b1}>
                         {"Precipitation Probability: %"}
-                        {data.precipProbability * 100}
+                        {(data.precipProbability * 100).toFixed(2)}
                       </div>
                       {data.precipType !== undefined ? (
                         <React.Fragment>
@@ -164,11 +164,11 @@ const DailyDetailed = (props) => {
                       ) : null}
                       <div className={classes.b1}>
                         {"Cloud Cover: %"}
-                        {data.cloudCover * 100}
+                        {(data.cloudCover * 100).toFixed(2)}
                       </div>
                       <div className={classes.b1}>
                         {"Humidity: %"}
-                        {data.humidity * 100}
+                        {(data.humidity * 100).toFixed(2)}
                       </div>
                       <div className={classes.b1}>
                         {"Moon Phase: "}

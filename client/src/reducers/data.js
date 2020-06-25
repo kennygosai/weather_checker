@@ -15,7 +15,7 @@ import { testdata } from "../assets/test/data";
  * @param {string} action
  */
 
-const dataReducer = (state = [], action) => {
+const dataReducer = (state = testdata, action) => {
     switch (action.type) {
       case "UPDATE":
         return action.payload;

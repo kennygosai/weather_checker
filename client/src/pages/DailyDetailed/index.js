@@ -54,7 +54,7 @@ const DailyDetailed = (props) => {
         results.length !== 0 ? (
           <React.Fragment>
             <Box className={classes.locationText}>
-              <Typography variant="h4" gutterBottom>
+              <Typography variant="h4" data-testid="title" gutterBottom>
                 {results.data.formatted}
               </Typography>
             </Box>

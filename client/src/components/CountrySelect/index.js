@@ -78,6 +78,7 @@ function CountrySelect(props) {
     <Autocomplete
       onChange={onTagsChange}
       id="country-select-demo"
+      data-testid="country"
       style={{ width: 300 }}
       options={countries}
       classes={{

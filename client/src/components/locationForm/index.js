@@ -44,11 +44,8 @@ function LocationForm() {
       fetch(`/weather/${city}/${country.values.label}`)
         .then(function (res) {
           // handle success
-          console.log(res)
-          
           return res.json()
         }).then((res2) => {
-          console.log(res2)
           dispatch({ type: "UPDATE", payload: {data: res2} }); //update redux
           cookies.set("city", city, { path: "/" });
           cookies.set("country", country, { path: "/" });
